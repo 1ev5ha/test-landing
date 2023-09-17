@@ -4,7 +4,6 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
 }
-
 html,
 body {
     height: 100%;
@@ -13,19 +12,15 @@ body {
     color: #515252;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-
 body._lock {
     overflow: hidden;
 } 
-
-
 .wrapper {
     min-height: 100%;
 }
 /*---------------------------*/
 /*---------------------------*/
 /*---------------------------*/
-
 .page {
     padding: 90px 0px 30px 0px;
     display: flex;
@@ -93,9 +88,7 @@ min-height: 70px; /*задан минимальный размер плашки 
 .logo_svg {
 width: 50%;    
 }
-
 .header__menu {}
-
 .menu__icon {
 display: none;
 }
@@ -108,12 +101,10 @@ flex-direction: column;
 margin-top: -200px;
 width: 50%;
 }
-
 .menu__list > li { /*обращение к ЛИ первого уровня*/
     position: relative;
     margin: 0px 0px 0px 20px;
     list-style-type: none; /*убираем маркеры*/
-    
 }
 .menu__link { /*ссылки основоного меню*/
     color: #525252;
@@ -135,18 +126,17 @@ width: 50%;
 }
 .menu__sub-list li { /*отступы в саб меню*/
     margin: 0px 0px 10px 0px;
-    
-   } 
+} 
 .menu__sub-list li:last-child { /*отступы в саб меню у последнего пункта*/
     margin: 0;
-   } 
+} 
 .menu__sub-link { /*список саб меню*/
  color: #fff;
  text-decoration: none; /*убираем подчеркивания*/
 } 
 .menu__sub-link:hover { /*список саб меню*/
     text-decoration: underline;
-   }
+}
 .menu__arrow { /*стрелка подменю*/
     display: none;
 }
@@ -157,22 +147,27 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-
+.footer__link { /*ссылки основоного меню*/
+    color: #525252;
+    font-size: 16px;
+    text-decoration: none; /*убираем подчеркивания*/
+    padding: 5px;
+}
 
 
  /*---------------------------------------------------*/
 body._pc .menu__list > li:hover .menu__sub-list { /*показываем вложенную подменюшку*/
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, 0px);
-    pointer-events: all;
+opacity: 1;
+visibility: visible;
+transform: translate(0px, 0px);
+pointer-events: all;
 }
 body._touch .menu__list > li {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 body._touch .menu__link {
-    flex: 1 1 auto;
+flex: 1 1 auto;
 }
 body._touch .menu__arrow { /*обращение к body с классом touch*//*показываем треугольничек в саб меню мобильной версии*/
 display: block;
@@ -184,149 +179,146 @@ border-right: 5px solid transparent;
 border-top: 10px solid #fff;
 }
 body._touch .menu__list > li._active .menu__sub-list { /*показываем вложенную подменюшку*/
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, 0px);
-    pointer-events: all;
+opacity: 1;
+visibility: visible;
+transform: translate(0px, 0px);
+pointer-events: all;
 }
 body._touch .menu__list > li._active .menu__arrow { /*анимация треугольничка*/
-    transform: rotate(-180deg);
+transform: rotate(-180deg);
 }
  /*---------------------------------------------------*/
 @media (min-width: 767px) {
     .menu__list {
-        display: flex;
-        align-items: center; 
+    display: flex;
+    align-items: center; 
     }
     .menu__list > li { /*расширяем переход между меню, что бы небыло разрыва и можно было навеститсь на подменю*/
-        padding: 10px 0;
+    padding: 10px 0;
     }
     .menu__sub-list {
-        transform: translate(0px, 10%);
-        opacity: 0;
-        visibility: hidden;
-       pointer-events: none; /*запрещает любые действия с объектом и наведение на подменю.*/
-        transition: all 0.3s ease 0s;
+    transform: translate(0px, 10%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /*запрещает любые действия с объектом и наведение на подменю.*/
+    transition: all 0.3s ease 0s;
     }
 }
  /*--------------------Мобильная версия-------------------------------*/
  @media (max-width: 767px) {
-     .menu__icon {
-         z-index: 5;
-         display: block;
-         position: relative;
-         width: 30px;
-         height: 18px;
-         cursor: pointer;
-     }
-
-     .menu__icon span,
-     .menu__icon::before,
-     .menu__icon::after {
-        left: 0;
-         position: absolute;
-         height: 10%;
-         width: 100%;
-         transition: all 0.3s ease 0s;
-         background-color: #000000;
-      }
-     .menu__icon::before,
-     .menu__icon::after {
-         content: "";
- }
- .menu__icon::before {
-     top: 0;
- }
-     .menu__icon::after {
-         bottom: 0;
-     }
-    
-     .menu__icon span { /*анимация иконки меню*/
-         top: 50%;
-         transform: scale(1) translate(0px, -50%);
-     } 
-
-     .menu__icon._active span {
-        transform: scale(0) translate(0px, -50%);
-    }
-    .menu__icon._active::before {
-        top: 50%;
-        transform: rotate(-45deg) translate(0px, -50%);
-    }
-    .menu__icon._active::after {
-        bottom: 50%;
-        transform: rotate(45deg) translate(0px, 50%);
-    }
-
-.menu__body {
-position: fixed;
-top: 0;
-left: 0;
-width: 90%;
-height: 100%;
-transform: translate(-100%, 0px);
-background-color: rgba(0, 0, 0, 0.9);
-padding: 100px 30px 30px 30px;
-transition: all 0.3s ease 0s;
-overflow: auto;
+  .menu__icon {
+     z-index: 5;
+     display: block;
+     position: relative;
+     width: 30px;
+     height: 18px;
+     cursor: pointer;
 }
-     .menu__body._active {
-         transform: translate(0px, 0px);
-     }
+   .menu__icon span,
+   .menu__icon::before,
+   .menu__icon::after {
+     left: 0;
+     position: absolute;
+     height: 10%;
+     width: 100%;
+     transition: all 0.3s ease 0s;
+     background-color: #000000;
+}
+   .menu__icon::before,
+   .menu__icon::after {
+     content: "";
+}
+   .menu__icon::before {
+     top: 0;
+}
+   .menu__icon::after {
+     bottom: 0;
+}
+   .menu__icon span { /*анимация иконки меню*/
+     top: 50%;
+     transform: scale(1) translate(0px, -50%);
+} 
+   .menu__icon._active span {
+     transform: scale(0) translate(0px, -50%);
+}
+   .menu__icon._active::before {
+     top: 50%;
+     transform: rotate(-45deg) translate(0px, -50%);
+}
+   .menu__icon._active::after {
+     bottom: 50%;
+     transform: rotate(45deg) translate(0px, 50%);
+}
 
-     .menu__body::before{
-         content: "";
-         position: fixed;
-         width: 100%;
-         top: 0;
-         left: 0;
-         height: 70px;
-         background-color: #ce4545;
-         z-index: 2;
-     }
-     .menu__list > li {
-         flex-wrap: wrap;
-         margin: 0px 0px 30px 0px;
-     }
-     .menu__list > li:last-child {
-         margin-bottom: 0;
-     }
+   .menu__body {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 90%;
+     height: 100%;
+     transform: translate(-100%, 0px);
+     background-color: rgba(0, 0, 0, 0.9);
+     padding: 100px 30px 30px 30px;
+     transition: all 0.3s ease 0s;
+     overflow: auto;
+}
+   .menu__body._active {
+     transform: translate(0px, 0px);
+}
 
-     .menu__list > li._active .menu__sub-list {
-         display: block;
-     }
-   
-     .menu__link {
-         font-size: 24px;
-         color: #fff;
-     }
-     .menu__sub-list {
-         position: relative;
-         background-color: #fff;
-         flex: 1 1 100%;
-         margin: 20px 0px 0px 0px;
-         display: none;
-     }
-     .menu__sub-link {
-         font-size: 20px;
-         color: black;
-     }
+   .menu__body::before{
+     content: "";
+     position: fixed;
+     width: 100%;
+     top: 0;
+     left: 0;
+     height: 70px;
+     background-color: #ce4545;
+     z-index: 2;
+}
+   .menu__list > li {
+     flex-wrap: wrap;
+     margin: 0px 0px 30px 0px;
+}
+   .menu__list > li:last-child {
+     margin-bottom: 0;
+}
+
+   .menu__list > li._active .menu__sub-list {
+     display: block;
+}
+   .menu__link {
+     font-size: 24px;
+     color: #fff;
+}
+    .menu__sub-list {
+     position: relative;
+     background-color: #fff;
+     flex: 1 1 100%;
+     margin: 20px 0px 0px 0px;
+     display: none;
+}
+    .menu__sub-link {
+     font-size: 20px;
+     color: black;
+}
+
+
 /*-------FONTS------------*/
-.page__title {
-font-size: 150px;
+    .page__title {
+     font-size: 150px;
 }
 }
 
 @media (max-width: 545px) {
-.page__title {
-font-size: 50px;
-padding: 0;
+    .page__title {
+     font-size: 50px;
+     padding: 0;
 }
-.page__text p {
+    .page__text p {
 
 }
-.page__section {
-
-padding: 10px;
+    .page__section {
+     padding: 10px;
 }
 }
