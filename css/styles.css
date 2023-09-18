@@ -29,10 +29,10 @@ body._lock {
 .page__section {
     padding: 30px;
     max-width: 1200px;
-    margin: 0px auto;
+    
 }
 .page__section_1 {
-  /*  background-color: rgb(247, 203, 109);*/
+    margin: 0px auto;
 }
 .page__section_2 {
     background-color: rgb(162, 109, 247);
@@ -41,8 +41,8 @@ body._lock {
     background-color: rgb(25, 92, 45);
 }
 .page__title {
-font-size: calc(120px - 1vw);
-margin: 0px 0px 20px 0px;
+font-size: calc(100px - 1vw);
+margin: 0px;
 }
 .page__h2 {
 margin: 0;
@@ -94,8 +94,8 @@ display: none;
 }
 .menu__body {}
 .welcome_h1 {
-display: flex; 
-flex-direction: column;
+display: flex;
+
 }
 .wellcome_img {
 margin-top: -200px;
@@ -141,12 +141,13 @@ width: 50%;
     display: none;
 }
 /*=======================FOOTER=======================*/
-.footer_info {
-max-width: 1200px;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+/*.footer_info {
+max-width: 1200px;/*ограничиваем по ширине */ 
+/*margin: 0px auto; /*и центрируем его*/
+/*align-items: center;
+border: 1px solid red;
+padding: 0px 30px;
+}*/
 .footer__link { /*ссылки основоного меню*/
     color: #525252;
     font-size: 16px;
@@ -312,7 +313,7 @@ transform: rotate(-180deg);
 
 @media (max-width: 545px) {
     .page__title {
-     font-size: 50px;
+     font-size: 30px;
      padding: 0;
 }
     .page__text p {
@@ -321,4 +322,11 @@ transform: rotate(-180deg);
     .page__section {
      padding: 10px;
 }
+
+.footer_info {
+flex-direction: column;
+align-items: center;
+border: 1px solid blue;
+}
+
 }
