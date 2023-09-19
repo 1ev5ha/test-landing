@@ -41,7 +41,7 @@ body._lock {
     background-color: rgb(25, 92, 45);
 }
 .page__title {
-font-size: calc(100px - 1vw);
+font-size: calc(140px - 1vw);
 margin: 0px;
 }
 .page__h2 {
