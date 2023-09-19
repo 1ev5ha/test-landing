@@ -88,7 +88,39 @@ if (menuLinks.length > 0) {
 }
 
 
-setInterval(function(){
+/*setInterval(function(){
     var a = document.getElementById('blink').style.opacity || 1;
     document.getElementById('blink').style.opacity = ((parseInt(a))?0:1);
-},1e3);
+},1e3);*/
+
+
+const div = document.getElementById("blink");
+function makeElementRed() {
+  div.style.color = "red";
+}
+
+function fadeElementIn() {
+  for (let i = 0; i <= 100; i += 5) {
+    setTimeout(() => {
+      div.style.opacity = i / 100;
+    }, i * 50);
+  }
+}
+
+function fadeElementOut() {
+  let i = 99;
+  (function loop() {
+    if (i >= 0) {
+      setTimeout(() => {
+        div.style.opacity = (i -= 5) / 100;
+        loop();
+      }, 10);
+    }
+  })();
+}
+
+setInterval(() => {
+  makeElementRed();
+  fadeElementIn();
+  setTimeout(() => fadeElementOut(), 2500);
+}, 3000); 
