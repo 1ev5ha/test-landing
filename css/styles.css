@@ -307,13 +307,13 @@ transform: rotate(-180deg);
 
 /*-------FONTS------------*/
     .page__title {
-     font-size: 150px;
+  /*   font-size: 150px;*/
 }
 }
 
 @media (max-width: 545px) {
     .page__title {
-     font-size: 30px;
+    font-size: 50px;
      padding: 0;
 }
     .page__text p {
