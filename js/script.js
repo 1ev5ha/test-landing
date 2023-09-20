@@ -93,7 +93,6 @@ if (menuLinks.length > 0) {
     document.getElementById('blink').style.opacity = ((parseInt(a))?0:1);
 },1e3);*/
 
-
 const div = document.getElementById("blink");
 function makeElementRed() {
   div.style.color = "red";
