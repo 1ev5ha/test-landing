@@ -358,6 +358,7 @@ flex-direction: column;
     font-size: 12px;
     padding: 10px auto;
     margin: 5px auto;
+    width: calc(100vw - 40px);
     }
 
 }
