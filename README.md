@@ -1,3 +1,3 @@
 # test-landing
 тестовая страница лэндинга
-https://vargur31rus.github.io/test-landing/
+https://1ev5ha.github.io/test-landing/
